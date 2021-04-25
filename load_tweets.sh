@@ -11,7 +11,7 @@ geoTwitter20-04-01.zip
 mkdir -p nohup
 
 for file in $files; do
-    nohup python3 -u load_tweets.py --db=postgres://postgres:pass@localhost:15432/ --inputs="$dir"/$file > nohup/nohup.$file &
+    nohup python3 -u load_tweets.py --db=postgresql://postgres:pass@localhost:15432/ --inputs="$dir"/$file > nohup/nohup.$file &
 done
 
 for file in $files; do
